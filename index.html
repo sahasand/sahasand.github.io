@@ -6,42 +6,367 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sandeep Saha - Personal Website</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="typewriter.js" defer></script>
   <script src="scripts.js" defer></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    section {
+      margin-bottom: 60px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+      padding: 32px 24px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    nav ul li a.active {
+      border-bottom: 2px solid #fff;
+    }
+    #three-bg {
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      z-index: -2;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+    .site-title {
+      text-align: center;
+      font-size: 2.3em;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin: 24px 0 10px 0;
+      color: #0288d1;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      text-shadow: 0 2px 8px rgba(79,195,247,0.08);
+    }
+  </style>
 </head>
 
-<body >
-
+<body>
+  <div id="three-bg"></div>
   <header>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="statchatter.html">StatChatter</a></li>
-        <li><a href="writing.html">Writing</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="about.html">About Me</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#writing">Writing</a></li>
       </ul>
     </nav>
+    <div class="site-title">Sandeep Saha</div>
   </header>
-
-  <main id="index-page">
-    <div class="background-image"></div>
-
-    <section id="welcome">
-      <h1 class="typewriter">Sandeep Saha...........................................................................................................................................</h1>
+  <main class="content">
+    <section id="home">
+      <p style="color: #e0e6ed;">Welcome to the quirky world of Sandeep Saha, a biostatistics aficionado who loves crunching numbers as much as he loves exploring the globe. Join him as he journeys from the bustling streets of India to the dynamic neighborhoods of Chicago, Toronto, and Boston. Along the way, Sandeep nurtures an unwavering passion for the Green Bay Packers, making sure to spread cheesehead cheer wherever he goes. As a true cosmopolitan, Sandeep effortlessly jives to the rhythm of life, blending his professional expertise with his zest for adventure in a harmonious dance that spans continents. So, get ready to embark on a lighthearted and entertaining ride with our witty protagonist, where numbers, travel, and football collide!</p>
     </section>
-        <p >Welcome to the quirky world of Sandeep Saha, 
-            a biostatistics aficionado who loves crunching numbers as much as he 
-            loves exploring the globe. Join him as he journeys from the bustling streets of India to 
-            the dynamic neighborhoods of Chicago, Toronto, and Boston. Along the way, Sandeep nurtures an unwavering passion for the Green Bay Packers, 
-            making sure to spread cheesehead cheer wherever he goes. As a true cosmopolitan, Sandeep effortlessly jives to the rhythm of life, 
-            blending his professional expertise with his zest for adventure in a harmonious dance that spans continents. So, get ready to embark 
-            on a lighthearted and entertaining ride with our witty protagonist, where numbers, travel, and football collide!</p>
+    <section id="writing">
+      <h2>My Writing</h2>
+      <div class="book-gallery">
+        <div class="book-card">
+          <img src="books/91QeFuYL2bL._AC_CR0,0,0,0_SX480_SY360_.jpg" alt="Jaiswal Dhamaal Book Cover">
+          <div class="book-info"><h4>Jaiswal Dhamaal</h4></div>
+          <a href="https://www.amazon.com/Jaiswal-Dhamaal-Sandeep-Saha/dp/B0C2S3GFFR/ref=tmm_pap_swatch_0" target="_blank" class="amazon-btn">View on Amazon</a>
+        </div>
+        <div class="book-card">
+          <img src="books/61T4Niz9UDL._AC_CR0,0,0,0_SX480_SY360_.jpg" alt="Viaan's Incredible Adventures: Journey of Wonders Book Cover">
+          <div class="book-info"><h4>Viaan's Incredible Adventures: Journey of Wonders</h4></div>
+          <a href="https://www.amazon.com/Viaans-Incredible-Adventures-Journey-Wonders/dp/B0C51RZF3R?ref_=ast_author_dp" target="_blank" class="amazon-btn">View on Amazon</a>
+        </div>
+        <div class="book-card">
+          <img src="books/61rAk5hcz8L._AC_CR0,0,0,0_SX480_SY360_.jpg" alt="Viaan's Incredible Adventures: Discovering Treasures Book Cover">
+          <div class="book-info"><h4>Viaan's Incredible Adventures: Discovering Treasures</h4></div>
+          <a href="https://www.amazon.com/Viaans-Incredible-Adventures-Discovering-Treasures/dp/B0C4WXBMT6?ref_=ast_author_dp" target="_blank" class="amazon-btn">View on Amazon</a>
+        </div>
+        <div class="book-card">
+          <img src="books/71QSpObAovL._AC_CR0,0,0,0_SX480_SY360_.jpg" alt="Wonderbound: A Journey of Adventure Book Cover">
+          <div class="book-info"><h4>Wonderbound: A Journey of Adventure</h4></div>
+          <a href="https://www.amazon.com/Wonderbound-Journey-Adventure-including-Colosseum/dp/B0BZFNYZMP?ref_=ast_author_dp" target="_blank" class="amazon-btn">View on Amazon</a>
+        </div>
+      </div>
+      <section id="newsletter">
+        <div class="newsletter-card">
+          <div class="newsletter-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#4fc3f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="newsletter-content">
+            <h3>Subscribe to My Newsletter</h3>
+            <p>Get the latest updates on my writing, projects, and statistical adventures. No spam, just stories and insights!</p>
+            <a href="https://sanman.substack.com" target="_blank" rel="noopener" class="substack-btn">Subscribe on Substack</a>
+          </div>
+        </div>
       </section>
+      <style>
+        .book-gallery {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 24px;
+          justify-content: flex-start;
+          margin-bottom: 32px;
+        }
+        .book-card {
+          background: #fff;
+          border-radius: 14px;
+          box-shadow: 0 2px 12px rgba(79,195,247,0.08);
+          padding: 18px 14px 20px 14px;
+          width: 200px;
+          text-align: center;
+          transition: transform 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s cubic-bezier(.4,2,.6,1);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          min-height: 340px;
+          position: relative;
+        }
+        .book-card:hover {
+          transform: translateY(-12px) scale(1.06) rotate(-1deg);
+          box-shadow: 0 12px 32px rgba(2,136,209,0.18), 0 2px 12px rgba(79,195,247,0.08);
+        }
+        .book-card img {
+          max-width: 100%;
+          border-radius: 8px;
+          margin-bottom: 12px;
+          box-shadow: 0 2px 8px rgba(2,136,209,0.07);
+        }
+        .book-info {
+          min-height: 56px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+        }
+        .book-card h4 {
+          font-size: 1.08em;
+          margin: 0;
+          color: #0288d1;
+          text-align: center;
+        }
+        .amazon-btn {
+          display: inline-block;
+          background: #ff9900;
+          color: #fff;
+          padding: 10px 18px;
+          border-radius: 6px;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 1em;
+          transition: background 0.2s;
+          margin-top: auto;
+          box-shadow: 0 2px 8px rgba(255,153,0,0.08);
+        }
+        .amazon-btn:hover {
+          background: #e47911;
+        }
+        @media (max-width: 900px) {
+          .book-gallery {
+            justify-content: center;
+          }
+        }
+        @media (max-width: 600px) {
+          .book-gallery {
+            flex-direction: column;
+            align-items: center;
+          }
+          .book-card {
+            width: 90vw;
+            max-width: 320px;
+          }
+        }
+        #newsletter {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 40px 0 32px 0;
+        }
+        .newsletter-card {
+          display: flex;
+          align-items: flex-start;
+          background: #f7fbff;
+          border: 1.5px solid #b3e5fc;
+          border-radius: 14px;
+          box-shadow: 0 2px 12px rgba(79,195,247,0.08);
+          padding: 28px 32px;
+          gap: 24px;
+          max-width: 480px;
+          width: 100%;
+          justify-content: center;
+        }
+        .newsletter-icon {
+          flex-shrink: 0;
+          margin-top: 6px;
+        }
+        .newsletter-content h3 {
+          margin: 0 0 8px 0;
+          font-size: 1.3em;
+          color: #0288d1;
+        }
+        .newsletter-content p {
+          margin: 0 0 16px 0;
+          color: #333;
+        }
+        .substack-btn {
+          display: inline-block;
+          background: linear-gradient(90deg, #4fc3f7 0%, #0288d1 100%);
+          color: #fff;
+          font-weight: bold;
+          padding: 14px 32px;
+          border-radius: 8px;
+          text-decoration: none;
+          font-size: 1.1em;
+          box-shadow: 0 2px 8px rgba(79,195,247,0.12);
+          transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+        }
+        .substack-btn:hover {
+          background: linear-gradient(90deg, #0288d1 0%, #4fc3f7 100%);
+          box-shadow: 0 4px 16px rgba(2,136,209,0.18);
+          transform: translateY(-2px) scale(1.04);
+        }
+        @media (max-width: 700px) {
+          .newsletter-card {
+            flex-direction: column;
+            align-items: stretch;
+            padding: 18px 8px;
+            gap: 12px;
+          }
+          .newsletter-icon {
+            margin-bottom: 8px;
+          }
+        }
+      </style>
+    </section>
   </main>
-
   <footer class="footer">
     <p>&copy; 2023 Sandeep Saha. All rights reserved. Respect the copyright, and I promise not to analyze your browsing data</p>
   </footer>
+  <script>
+    // Modern nav active state
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function() {
+        document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+    // Space-themed Three.js animated background
+    let scene = new THREE.Scene();
+    let camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+    let renderer = new THREE.WebGLRenderer({ alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.getElementById('three-bg').appendChild(renderer.domElement);
+
+    // Add stars (small glowing spheres)
+    let stars = [];
+    let starMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+    for (let i = 0; i < 120; i++) {
+      let geometry = new THREE.SphereGeometry(Math.random() * 0.08 + 0.03, 12, 12);
+      let mesh = new THREE.Mesh(geometry, starMaterial.clone());
+      mesh.position.set(
+        (Math.random() - 0.5) * 32,
+        (Math.random() - 0.5) * 18,
+        (Math.random() - 0.5) * 30
+      );
+      // Random star color (white, blue, yellow)
+      let colors = [0xffffff, 0xfff9c4, 0x90caf9, 0xb3e5fc];
+      mesh.material.color.setHex(colors[Math.floor(Math.random() * colors.length)]);
+      mesh.material.transparent = true;
+      mesh.material.opacity = Math.random() * 0.5 + 0.5;
+      stars.push(mesh);
+      scene.add(mesh);
+    }
+
+    // Add planets (larger colored spheres)
+    let planets = [];
+    let planetColors = [0x4fc3f7, 0xffb300, 0x8e24aa, 0x43a047, 0xff5252];
+    let ringMesh = null;
+    for (let i = 0; i < 4; i++) {
+      let geometry = new THREE.SphereGeometry(Math.random() * 1.2 + 0.7, 32, 32);
+      let material = new THREE.MeshStandardMaterial({ color: planetColors[i], roughness: 0.4, metalness: 0.7 });
+      let mesh = new THREE.Mesh(geometry, material);
+      mesh.position.set(
+        (Math.random() - 0.5) * 18,
+        (Math.random() - 0.5) * 10,
+        (Math.random() - 0.5) * 10
+      );
+      // Add a ring to the first planet (like Saturn)
+      if (i === 0) {
+        let ringGeo = new THREE.TorusGeometry(2.2, 0.12, 2, 60);
+        let ringMat = new THREE.MeshBasicMaterial({ color: 0xb3e5fc, transparent: true, opacity: 0.5 });
+        ringMesh = new THREE.Mesh(ringGeo, ringMat);
+        ringMesh.position.copy(mesh.position);
+        ringMesh.rotation.x = Math.PI / 2.2;
+        scene.add(ringMesh);
+      }
+      planets.push(mesh);
+      scene.add(mesh);
+    }
+
+    // Add a comet (small sphere with a glowing tail)
+    let cometGeo = new THREE.SphereGeometry(0.18, 16, 16);
+    let cometMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
+    let comet = new THREE.Mesh(cometGeo, cometMat);
+    scene.add(comet);
+    // Comet tail (using a stretched transparent sphere)
+    let tailGeo = new THREE.SphereGeometry(0.18, 16, 16);
+    let tailMat = new THREE.MeshBasicMaterial({ color: 0x90caf9, transparent: true, opacity: 0.5 });
+    let tail = new THREE.Mesh(tailGeo, tailMat);
+    tail.scale.set(2.8, 0.5, 0.5);
+    scene.add(tail);
+
+    // Add a nebula (large, semi-transparent colored sphere)
+    let nebulaGeo = new THREE.SphereGeometry(7, 32, 32);
+    let nebulaMat = new THREE.MeshBasicMaterial({ color: 0x8e24aa, transparent: true, opacity: 0.18 });
+    let nebula = new THREE.Mesh(nebulaGeo, nebulaMat);
+    nebula.position.set(-8, 6, -10);
+    scene.add(nebula);
+
+    // Add a soft ambient light and a point light (like a sun)
+    let ambientLight = new THREE.AmbientLight(0xffffff, 0.45);
+    scene.add(ambientLight);
+    let sunLight = new THREE.PointLight(0xfff176, 1.2, 0);
+    sunLight.position.set(0, 0, 20);
+    scene.add(sunLight);
+
+    camera.position.z = 16;
+    let theta = 0;
+    let cometAngle = 0;
+    function animate() {
+      requestAnimationFrame(animate);
+      // Slowly rotate the whole scene for a cosmic effect
+      theta += 0.0007;
+      scene.rotation.y = Math.sin(theta) * 0.18;
+      scene.rotation.x = Math.cos(theta) * 0.08;
+      // Planets slow orbit
+      planets.forEach((planet, i) => {
+        planet.position.x += Math.sin(Date.now() * 0.0002 + i) * 0.01;
+        planet.position.y += Math.cos(Date.now() * 0.0002 + i) * 0.01;
+      });
+      // Keep the ring with the first planet
+      if (ringMesh) {
+        ringMesh.position.copy(planets[0].position);
+        ringMesh.rotation.z += 0.002;
+      }
+      // Animate comet in an elliptical orbit
+      cometAngle += 0.002;
+      let cometRadius = 13;
+      comet.position.set(
+        Math.cos(cometAngle) * cometRadius,
+        Math.sin(cometAngle) * (cometRadius * 0.4) - 2,
+        Math.sin(cometAngle) * 3 - 6
+      );
+      tail.position.copy(comet.position);
+      tail.rotation.z = cometAngle + Math.PI / 2;
+      renderer.render(scene, camera);
+    }
+    animate();
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+  </script>
 </body>
 
 </html>
