@@ -230,52 +230,52 @@ body {
     margin: 0;
     padding: 0;
   }
-  
+
   ul {
     list-style: none;
     padding: 0;
   }
-  
+
   a {
     text-decoration: none;
   }
-  
+
   /* Navigation styles */
   nav {
     background-color: #333;
     text-align: center;
     padding: 10px;
   }
-  
+
   nav ul {
     list-style-type: none;
   }
-  
+
   nav ul li {
     display: inline;
   }
-  
+
   nav ul li a {
     color: white;
     padding: 0 20px;
     font-size: 20px;
   }
-  
+
   nav ul li a.active,
   nav ul li a:hover {
     background-color: #555;
     padding: 6px 20px;
   }
-  
+
   /* Main content styles */
   main {
     padding: 20px;
   }
-  
+
   main h1 {
     font-size: 24px;
   }
-  
+
 /* Footer styles */
 footer {
   background-color: #333;
@@ -301,7 +301,7 @@ footer p {
   margin-bottom: 0;
 }
 
-  
+
   /* Left and Right Column Styles */
   .left-column, .right-column {
     display: inline-block;
@@ -309,11 +309,11 @@ footer p {
     width: 48%;
     margin-right: 2%;
   }
-  
+
   .right-column:last-child {
     margin-right: 0;
   }
-  
+
   /* Amazon book cover styles */
   #amazon-book img {
     max-width: 25%;
@@ -323,7 +323,7 @@ footer p {
     max-width: 50%;
     height: auto;
   }
-  
+
   /* Typewriter effect styles */
   h1.typewriter, h2.typewriter, p.typewriter {
     overflow: hidden;
@@ -332,9 +332,9 @@ footer p {
     animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
   }
 
-  
-  
-  
+
+
+
 /* Global styles */
 /* ... */
 
@@ -412,5 +412,3 @@ body {
   font-weight: 500;
   text-shadow: 0 2px 8px rgba(0,0,0,0.18);
 }
-
-  
